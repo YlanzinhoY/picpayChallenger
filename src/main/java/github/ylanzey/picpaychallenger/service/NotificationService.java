@@ -16,6 +16,8 @@ public class NotificationService {
 
     public void SendNotification(Transfer transfer) {
         try {
+            logger.info("Sending notification");
+
             var res = notificationClient.sendNotification(transfer);
 
             if(res.getStatusCode().isError())

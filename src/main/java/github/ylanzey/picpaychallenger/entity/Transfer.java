@@ -30,4 +30,10 @@ public class Transfer{
 
     @Column(name = "value")
     private BigDecimal value;
+
+    public Transfer(Wallet sender, Wallet receiver, BigDecimal value) {
+        this.value = value;
+        this.receiver = receiver;
+        this.sender = sender;
+    }
 }

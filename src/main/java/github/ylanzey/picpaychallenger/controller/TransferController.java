@@ -4,6 +4,7 @@ import github.ylanzey.picpaychallenger.dto.TransferDto;
 import github.ylanzey.picpaychallenger.entity.Transfer;
 import github.ylanzey.picpaychallenger.service.TransferService;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
