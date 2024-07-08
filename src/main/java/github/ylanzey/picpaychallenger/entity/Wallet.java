@@ -1,10 +1,7 @@
 package github.ylanzey.picpaychallenger.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -44,5 +41,13 @@ public class Wallet {
         this.email = email;
         this.password = password;
         this.walletType = walletType;
+    }
+
+    public boolean isTransferAllowedForWalletType() {
+        return this.walletType.equals(WalletType.Enum.USER.get());
+    }
+
+    public boolean isBalancerBiggerThan(BigDecimal value) {
+        return this.balance.doubleValue() >= value.doubleValue();
     }
 }

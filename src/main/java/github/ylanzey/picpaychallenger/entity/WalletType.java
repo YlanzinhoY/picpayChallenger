@@ -1,10 +1,7 @@
 package github.ylanzey.picpaychallenger.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "tb_wallet_type")
@@ -12,6 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class WalletType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
